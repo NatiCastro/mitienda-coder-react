@@ -7,6 +7,10 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // Hoja de estilo propio
 import '../Estilos/NavBarStyle.css';
+//Importando CartWidget
+import IconoCarrito from "./CartWidget";
+
+
 
 
  export default function BarraNavegacion () {
@@ -31,8 +35,10 @@ import '../Estilos/NavBarStyle.css';
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
+                <IconoCarrito/>
             </Container>
         </Navbar>
+        
 </>
     )
 }
