@@ -1,14 +1,21 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import BarraNavegacion from './Componentes/NavBar';
+
+
 
 function App() {
-
-  let saludo = 'Hola Mundo!';
+  let tienda = 'Tienda Mainhdra';
   return (
     <div className="App">
-      {saludo}
+         
+         <BarraNavegacion />
+      
+      <h1 className='titulo-principal'>{tienda}</h1>
+
     </div>
   );
 }
+
 
 export default App;

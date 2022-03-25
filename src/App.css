@@ -1,7 +1,13 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.titulo-principal {
   margin-top: 2rem;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 4rem;
-  color: rgb(67, 155, 136);
+  color: rgb(110, 114, 113);
 }
