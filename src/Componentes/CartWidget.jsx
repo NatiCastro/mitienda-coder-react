@@ -15,9 +15,10 @@ export default function IconoCarrito () {
             <FontAwesomeIcon 
                 icon={faBagShopping} 
                 style={{fontSize:36, color:'rgb(110, 114, 113)'}} 
+                className="icono-fontawesome"
             />
 
-            <span className="contador" >2</span>
+            <span className="contador" >0</span>
 
         </div>
     
