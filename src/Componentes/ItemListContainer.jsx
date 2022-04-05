@@ -1,57 +1,32 @@
 import React from "react";
-import '../Estilos/ItemCount.css';
-import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import customFetch from "../Utils/customFetch";
+import productos from "../Utils/productos";
+import ItemList from "./ItemList";
+import '../Estilos/Items.css';
 
 export default function ItemListContainer() {
 
-    //Indico la cantidad inicial
-    const [cantidadInicial, setCantidadInicial] = useState(1);
-    //Indico el stock 
-    const [stock] = useState(5);
+    const [items, setItems] = useState([]);
 
-    //Función para sumar cantidad según el stock
-    const Suma = () => {
-        if (cantidadInicial < stock) {
-        setCantidadInicial(cantidadInicial + 1);
-        }
-    }    
+    //UseEffect
+    useEffect(() => {
 
-    //Función de resta hasta la cantidad inicial
-    const Resta = () => {
-        if (cantidadInicial > 1) {
-        setCantidadInicial(cantidadInicial - 1);
-        }
-    } 
+        customFetch(5000, productos)
+        .then(resultado => setItems(resultado))
+        .catch(error => console.log(error));
 
-    //Función para el botón de Agregar al carrito 
-    const OnAdd = () => {
-        alert(`Agregaste  ${cantidadInicial} unidades`)
-    }
+    }, [items])
 
     return (
         <>  
-            {/* Primer botón - resta items */}
-             <ItemCount 
-                sumaOResta={Resta}
-                texto='-'
-            />
-            {/* Div con número de items */}
-            <div className="cantidad-itemcount">{cantidadInicial}</div>
 
-            {/* Segundo botón - suma items */}
-            <ItemCount 
-                sumaOResta={Suma}
-                texto='+'
-            />
-            {/* Botón agregar al carrito */}
-            <button 
-                className="agregar-carrito"
-                onClick={OnAdd} >
-                    
-                Agregar al Carrito
+        <div className="cards-productos">
 
-            </button>
+            <ItemList productos= {items} />
+
+        </div>
+            
         </>
     );
 }

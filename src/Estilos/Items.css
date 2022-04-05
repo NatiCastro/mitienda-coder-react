@@ -1,0 +1,41 @@
+.contenedor-botones {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.botones-itemcount {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(189, 139, 189);
+  border: 2px solid rgb(189, 139, 189);
+  border-radius: 5px;
+}
+.botones-itemcount:hover {
+  background-color: rgb(245, 233, 244);
+}
+.cantidad-itemcount {
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  padding: 1rem;
+}
+.agregar-carrito {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(189, 139, 189);
+  border: 2px solid rgb(189, 139, 189);
+  border-radius: 5px;
+}
+.agregar-carrito:hover {
+  background-color: rgb(245, 233, 244);
+}
+.cards-productos {
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

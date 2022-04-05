@@ -16,11 +16,7 @@ function App() {
       
       <h1 className='titulo-principal'>{tienda}</h1>
 
-      <div className='contenedor-botones'>
-
-      <ItemListContainer/>
-
-       </div>
+      <ItemListContainer/>  
 
     </div>
 
