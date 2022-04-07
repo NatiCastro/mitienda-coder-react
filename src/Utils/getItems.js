@@ -1,7 +1,8 @@
-//Promesa para ItemListContainer
+//Promesa para ItemDetailContainer
+
 let isOk = true;
 
-const customFetch = (time, task) => {
+const getItems = (time, task) => {
     return new Promise ((resolve, reject) => {
 
         setTimeout (() => {
@@ -17,5 +18,4 @@ const customFetch = (time, task) => {
     )
 }
 
-export default customFetch;
-
+export default getItems;

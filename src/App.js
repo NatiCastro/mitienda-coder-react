@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ItemDetailContainer from './Componentes/ItemDetailContainer';
 import ItemListContainer from './Componentes/ItemListContainer';
 import BarraNavegacion from './Componentes/NavBar';
 
@@ -16,7 +17,9 @@ function App() {
       
       <h1 className='titulo-principal'>{tienda}</h1>
 
-      <ItemListContainer/>  
+      <ItemListContainer/> 
+       
+      <ItemDetailContainer />
 
     </div>
 
