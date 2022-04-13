@@ -2,8 +2,9 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
-export default function Item ({id, nombre, precio, imagen}) {
+export default function Item ({id, nombre, precio, imagen, idItem}) {
 
     return (
                 <Card key={id} style={{ width: '18rem' }}>
@@ -14,6 +15,7 @@ export default function Item ({id, nombre, precio, imagen}) {
             <Card.Text>
            $ {precio}
             </Card.Text>
+            <Link to={`/item/${idItem}`}>Más info</Link>
             <ItemCount stock={5} />
         </Card.Body>
         </Container>

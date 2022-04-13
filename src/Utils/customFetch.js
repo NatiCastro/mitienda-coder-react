@@ -1,4 +1,4 @@
-//Promesa para ItemListContainer
+
 let isOk = true;
 
 const customFetch = (time, task) => {

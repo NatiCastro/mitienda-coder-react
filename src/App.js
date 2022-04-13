@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from './Componentes/ItemDetailContainer';
 import ItemListContainer from './Componentes/ItemListContainer';
 import BarraNavegacion from './Componentes/NavBar';
+
 
 
 
@@ -11,18 +13,26 @@ function App() {
   let tienda = 'Tienda Mainhdra';
   
   return (
-    <div className="App">
+    <>
+    <BrowserRouter>
          
-         <BarraNavegacion />
+        <BarraNavegacion />
       
-      <h1 className='titulo-principal'>{tienda}</h1>
+        <h1 className='titulo-principal'>{tienda}</h1>
+      
+      <Routes>
+        
+        <Route exact path="/" element={<ItemListContainer />} />
 
-      <ItemListContainer/> 
-       
-      <ItemDetailContainer />
+        <Route exact path="/category/:id" element={<ItemListContainer />} />
 
-    </div>
+        <Route exact path="/item/:idItem" element={<ItemDetailContainer />} />
 
+      </Routes>
+
+    
+    </BrowserRouter>
+    </>
   );
 }
 

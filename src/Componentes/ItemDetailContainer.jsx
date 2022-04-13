@@ -1,32 +1,40 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import getItems from "../Utils/getItems";
-import productos from "../Utils/productos";
 import '../Estilos/Items.css';
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
+import { getItemDetail } from "../Utils/promises";
+
 
 export default function ItemDetailContainer() {
-
+    
     const [items, setItems] = useState([]);
+    const {idItem} = useParams();
 
-    //UseEffect
     useEffect(() => {
+        console.log(idItem);
+        
+        getItemDetail(idItem)
 
-        getItems(2000, productos)
         .then(resultado => setItems(resultado))
         .catch(error => console.log(error));
+        
 
-    }, [items])
+    }, [idItem])
 
+    console.log(items)
     return (
         <>  
 
         <div className="card-producto">
 
-            <ItemDetail productos= {items} />
+            <ItemDetail producto= {items} />
 
         </div>
             
         </>
     );
 }
+
+
+    

@@ -1,22 +1,27 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import customFetch from "../Utils/customFetch";
-import productos from "../Utils/productos";
 import ItemList from "./ItemList";
 import '../Estilos/Items.css';
+import { useParams } from "react-router-dom";
+import { categorys } from "../Utils/promises";
 
 export default function ItemListContainer() {
 
     const [items, setItems] = useState([]);
-
-    //UseEffect
+    
+    const {id} = useParams();
+    
     useEffect(() => {
 
-        customFetch(5000, productos)
+        console.log(id);
+        
+        categorys(id)
+
         .then(resultado => setItems(resultado))
         .catch(error => console.log(error));
+       
 
-    }, [items])
+    }, [id])
 
     return (
         <>  
@@ -25,8 +30,10 @@ export default function ItemListContainer() {
 
             <ItemList productos= {items} />
 
+
         </div>
             
         </>
     );
 }
+
