@@ -1,4 +1,5 @@
 import React from "react";
+import "../Estilos/Items.css";
 import { useState, useEffect } from "react";
 import '../Estilos/Items.css';
 import ItemDetail from "./ItemDetail";
@@ -9,6 +10,7 @@ import { getItemDetail } from "../Utils/promises";
 export default function ItemDetailContainer() {
     
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const {idItem} = useParams();
 
     useEffect(() => {
@@ -17,23 +19,31 @@ export default function ItemDetailContainer() {
         getItemDetail(idItem)
 
         .then(resultado => setItems(resultado))
-        .catch(error => console.log(error));
-        
+        .catch(error => console.log(error))
+        .finally(() => {
+            setLoading(false);
+        });
 
     }, [idItem])
 
     console.log(items)
+
     return (
         <>  
+            {loading ? (
 
-        <div className="card-producto">
+                <h3 className="text-loading">Cargando producto...</h3>
 
-            <ItemDetail producto= {items} />
+            ) : (
+                <div className="card-producto">
 
-        </div>
+                    <ItemDetail producto= {items} />
+    
+                </div>
+            )}
             
         </>
-    );
+    )
 }
 
 
