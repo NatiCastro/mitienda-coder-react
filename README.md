@@ -4,7 +4,7 @@
 
 - Proyecto del curso de React
 
-![]()
+![](https://github.com/NatiCastro/mitienda-coder-react/blob/main/src/Images/Screenshot%202022-04-12%20at%2018-59-34%20React%20App.png)
 
 <!-- # Getting Started with Create React App
 
