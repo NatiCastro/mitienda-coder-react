@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
+import '../Estilos/Items.css';
+import { Link } from "react-router-dom";
 
 export default function ItemDetail ({producto}) {
- 
-    console.log(producto)
+
+    const [cantidad, setCantidad] = useState(0);
+
+    function handleOnAdd (c) {
+        setCantidad(c);
+    }
+    console.log(cantidad);
+
+
     return (
 
                 <Card key={producto.id} style={{ width: '24rem' }}>
@@ -17,7 +26,9 @@ export default function ItemDetail ({producto}) {
                         <br/>
                         Peso Neto: {producto.peso}
                     </Card.Text>
-                    <ItemCount stock={producto.stock} />
+                    <ItemCount stock={producto.stock} OnAdd={handleOnAdd} />
+                    <br/>
+                    <Link to={"/cart"} className="ver-carrito">Ver carrito</Link> 
                 </Card.Body>
                 </Card>     
              

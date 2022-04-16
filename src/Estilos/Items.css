@@ -32,6 +32,21 @@
 .agregar-carrito:hover {
   background-color: rgb(245, 233, 244);
 }
+.ver-carrito {
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.ver-carrito:hover {
+  background-color: rgb(189, 139, 189);
+  color: black;
+}
 .cards-productos {
   margin: 2rem;
   display: flex;

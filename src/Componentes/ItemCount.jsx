@@ -1,39 +1,37 @@
 import React from "react";
 import { useState } from "react";
-import '../Estilos/Items.css';
+// import '../Estilos/Items.css';
+// import { Link } from "react-router-dom";
 
 
-export default function ItemCount ({stock}) {
+export default function ItemCount ({stock, OnAdd}) {
      //Indico la cantidad inicial
-     const [cantidadInicial, setCantidadInicial] = useState(1);
+     const [count, setCount] = useState(1);
+    //  const [agregarProducto, setAgregarProducto] = useState([]);
 
      //Función para sumar cantidad según el stock
      const Suma = () => {
-         if (cantidadInicial < stock) {
-         setCantidadInicial(cantidadInicial + 1);
+         if (count < stock) {
+         setCount(count + 1);
          }
      }    
  
      //Función de resta hasta la cantidad inicial
      const Resta = () => {
-         if (cantidadInicial > 1) {
-         setCantidadInicial(cantidadInicial - 1);
+         if (count > 1) {
+         setCount(count - 1);
          }
      } 
  
-     //Función con mensaje para agregar al carrito
-     const OnAdd = () => {
-         alert(`Agregaste  ${cantidadInicial} unidades`)
-     }
     return (
         <>
        <div>
             <div className="contenedor-botones">
                 <button className="botones-itemcount" onClick={Resta}>-</button>
-                <p className="cantidad-itemcount">{cantidadInicial}</p>
+                <p className="cantidad-itemcount">{count}</p>
                 <button className="botones-itemcount" onClick={Suma}>+</button>
             </div>
-            <button className="agregar-carrito" onClick={OnAdd}>Agregar al carrito</button>   
+            <button className="agregar-carrito" onClick={()=> OnAdd(count)}>Agregar al carrito</button>   
         </div>
         
         </>
