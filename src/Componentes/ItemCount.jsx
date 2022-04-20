@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from "react";
-// import '../Estilos/Items.css';
-// import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import { CartContext } from "./CartContext";
 
 
-export default function ItemCount ({stock, OnAdd}) {
+
+export default function ItemCount ({stock, nombre, id, precio, onAdd}) {
      //Indico la cantidad inicial
      const [count, setCount] = useState(1);
-    //  const [agregarProducto, setAgregarProducto] = useState([]);
+    
+     //Me traigo la función con useContext
+    const { addToCart } = useContext(CartContext);
 
      //Función para sumar cantidad según el stock
      const Suma = () => {
@@ -31,7 +33,14 @@ export default function ItemCount ({stock, OnAdd}) {
                 <p className="cantidad-itemcount">{count}</p>
                 <button className="botones-itemcount" onClick={Suma}>+</button>
             </div>
-            <button className="agregar-carrito" onClick={()=> OnAdd(count)}>Agregar al carrito</button>   
+            <button className="agregar-carrito" 
+            onClick={()=> {
+                            addToCart({id, nombre, precio, count});
+                            setCount(1);
+                            onAdd(count);
+                            }}>
+                Agregar al carrito
+            </button>   
         </div>
         
         </>

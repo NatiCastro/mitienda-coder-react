@@ -64,3 +64,53 @@
   color: rgb(189, 139, 189);
   text-align: center;
 }
+/* Estilos Cart */
+.titulo-cart {
+  margin: 1rem;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2rem;
+  color: rgb(110, 114, 113);
+}
+.carrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-remover {
+  margin: 0 1rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 90px;
+  height: 30px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.boton-remover:hover {
+  background-color: rgb(245, 233, 244);
+  color: black;
+}
+.contenedor-boton-comprar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-comprar {
+  margin: 1rem;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.boton-comprar:hover {
+  background-color: rgb(189, 139, 189);
+  color: black;
+}

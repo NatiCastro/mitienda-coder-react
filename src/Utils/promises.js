@@ -21,7 +21,7 @@ export const categorys = (id) => {
             } else {
                 reject("Error")
             }
-        }, 2000);
+        }, 1000);
     })
 }
 

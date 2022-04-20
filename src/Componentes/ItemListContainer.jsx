@@ -12,8 +12,6 @@ export default function ItemListContainer() {
     const {id} = useParams();
     
     useEffect(() => {
-
-        console.log(id);
         
         categorys(id)
 
@@ -29,7 +27,6 @@ export default function ItemListContainer() {
         <div className="cards-productos">
 
             <ItemList productos= {items} />
-
 
         </div>
             
