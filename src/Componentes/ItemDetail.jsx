@@ -28,14 +28,13 @@ export default function ItemDetail ({producto}) {
                         <br/>
                         Peso Neto: {producto.peso}
                     </Card.Text>
-                    <ItemCount stock={producto.stock} 
+                    <ItemCount  stock={producto.stock} 
                                 nombre={producto.nombre} 
                                 id={producto.id} 
                                 precio={producto.precio} 
                                 onAdd={handleOnAdd} />
                     <br/>
                     <Link to={"/cart"} className="ver-carrito">Ver carrito</Link> 
-                    {/* <button onClick={()=>{console.log(ItemDetail=({producto})); addToCart({...producto})}} >AddToCart</button> */}
                 </Card.Body>
                 </Card>     
              
