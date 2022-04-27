@@ -45,7 +45,7 @@ const productos = [
         nombre: "Manteca de Karité", 
         precio: 1800,
         imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/987/399/products/turmeric1-f19cc0c701377fad8015581018299718-480-0.png',
-        descripcion: "La manteca de Karite es un potente aceite regenerador calular 100 % natural. Hidratante, nutritivo, suaviza el rostro y el cuerpo previniendo los signos de la edad y aportando vitalidad y luminosidad,tanto al cutis como al cabello.Ayuda a proteger la piel de los rayos UVA y UVB.Además previene el envejecimiento de la piel y es muy efectiva regenerando pieles envejecidas , resecas , deshidratadas e iiritadas.", 
+        descripcion: "El aceite de Karite es un potente regenerador celular 100 % natural. Hidratante, nutritivo, suaviza el rostro y el cuerpo previniendo los signos de la edad y aportando vitalidad y luminosidad,tanto al cutis como al cabello.Ayuda a proteger la piel de los rayos UVA y UVB.Además previene el envejecimiento de la piel y es muy efectiva regenerando pieles envejecidas , resecas , deshidratadas e irritadas.", 
         peso: "80gr", 
         stock: 8,
         categoria: "aceites"
@@ -65,7 +65,7 @@ const productos = [
         nombre: "Manteca de Cacao", 
         precio: 1400,
         imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/987/399/products/turmeric1-f19cc0c701377fad8015581018299718-480-0.png',
-        descripcion: "La manteca de cacao previene el envejecimieto, repara las células , disminuye las cicatrices e hidrata. Tiene propiedades antioxidantes que aportan multitud de beneficios para la piel. Es rica en Vitamina E, la cual permite aumentar la produccion de colageno,sustancia que da elasticidad y vitalidad a la piel. Tiene propiedades antinflamatorias gracias a las cuales es posible curar la piel seca y agrietada,los eczemas y la psoriasis. Permite humectar el cabello manteniendolo hidratado y brillante despues de su aplicación.", 
+        descripcion: "El aceite o manteca de cacao previene el envejecimieto, repara las células , disminuye las cicatrices e hidrata. Tiene propiedades antioxidantes que aportan multitud de beneficios para la piel. Es rica en Vitamina E, la cual permite aumentar la produccion de colageno,sustancia que da elasticidad y vitalidad a la piel. Tiene propiedades antinflamatorias gracias a las cuales es posible curar la piel seca y agrietada,los eczemas y la psoriasis. Permite humectar el cabello manteniendolo hidratado y brillante despues de su aplicación.", 
         peso: "80gr", 
         stock: 10,
         categoria: "aceites"

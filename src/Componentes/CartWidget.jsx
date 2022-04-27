@@ -15,7 +15,7 @@ export default function IconoCarrito () {
     return (
         <>
         {/* Condicional para mostrar el contador sólo si tiene productos */}
-        {cart.length === 0 ?
+        {cart.length === 0 ? (
         <div className= "icono-carrito">
             <Link to='/cart'>
                 <FontAwesomeIcon 
@@ -23,17 +23,17 @@ export default function IconoCarrito () {
                     style={{fontSize:36, color:'rgb(110, 114, 113)'}} 
                     className="icono-fontawesome" />               
             </Link>
-        </div> :
+        </div>) : (
             
             <div className= "icono-carrito">
-            <Link to='/cart'>               
-                <FontAwesomeIcon 
-                    icon={faBagShopping} 
-                    style={{fontSize:36, color:'rgb(110, 114, 113)'}} 
-                    className="icono-fontawesome"/>               
-                <span className="contador" >{cantidadTotal()}</span>
-            </Link>
-        </div>
+                <Link to='/cart'>               
+                    <FontAwesomeIcon 
+                        icon={faBagShopping} 
+                        style={{fontSize:36, color:'rgb(110, 114, 113)'}} 
+                        className="icono-fontawesome"/>               
+                    <span className="contador" >{cantidadTotal()}</span>
+                </Link>
+            </div>)
         }
         </>
     )

@@ -4,42 +4,44 @@ import { useState, useEffect } from "react";
 import '../Estilos/Items.css';
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { getItemDetail } from "../Utils/promises";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 
 export default function ItemDetailContainer() {
     
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
-    const {idItem} = useParams();
+    const { idItem } = useParams();
 
-    useEffect(() => {
-        
-        getItemDetail(idItem)
+    useEffect(()=>{
+        setTimeout(()=> {
 
-        .then(resultado => setItems(resultado))
-        .catch(error => console.log(error))
-        .finally(() => {
-            setLoading(false);
-        });
+        const db = getFirestore();
+       
+        const productosRef = doc(db, 'productos', idItem);
 
-    }, [idItem])
+        getDoc(productosRef).then((res)=> setItems({id: res.id, ...res.data()}))
+                            .catch(error=> console.log(error))
+                            .finally(() => setLoading(false));
 
-    console.log(items)
+                        }, 1000);
+
+    }, [idItem]);
 
     return (
         <>  
-            {loading ? (
+        {loading ? (
 
-                <h3 className="text-loading">Cargando producto...</h3>
+                <h2 className="text-loading ">Cargando Producto...</h2>
 
-            ) : (
+                ) : (
+
                 <div className="card-producto">
 
                     <ItemDetail producto= {items} />
     
                 </div>
-            )}
+        ) }
             
         </>
     )

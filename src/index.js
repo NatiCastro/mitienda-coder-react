@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDm2CnSHhnzCaxF3a36PgGdPIPypNB_3bA",
+  authDomain: "mitienda-react.firebaseapp.com",
+  projectId: "mitienda-react",
+  storageBucket: "mitienda-react.appspot.com",
+  messagingSenderId: "790329543805",
+  appId: "1:790329543805:web:b22ed105c143d1be5f7514"
+};
+
+initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

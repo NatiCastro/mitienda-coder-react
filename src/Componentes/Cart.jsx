@@ -40,6 +40,7 @@ export default function Cart() {
             <p><b>Precio Total: </b>$ {precioTotal}</p>
             <p><b>Cantidad Total: </b>{cantidadTotal()}</p>
             <button className="boton-comprar" onClick={()=>comprarTodo()}>Terminar mi compra</button>
+            {/* <Link to= {"/formulariocompra"} className="ir-a-tienda">Finalizar Compra</Link> */}
         </div>       
         
         </>

@@ -1,3 +1,4 @@
+/* Estilo Itemcount */
 .contenedor-botones {
   display: flex;
   justify-content: left;
@@ -32,6 +33,7 @@
 .agregar-carrito:hover {
   background-color: rgb(245, 233, 244);
 }
+/* Estilos ItemDetail */
 .ver-carrito {
   padding: 0.4rem 0.8rem;
   text-decoration: none;
@@ -47,6 +49,11 @@
   background-color: rgb(189, 139, 189);
   color: black;
 }
+.text-loading {
+  color: rgb(189, 139, 189);
+  text-align: center;
+}
+/* Estilos Item */
 .cards-productos {
   margin: 2rem;
   display: flex;
@@ -60,10 +67,22 @@
   justify-content: center;
   align-items: center;
 }
-.text-loading {
-  color: rgb(189, 139, 189);
+.link-masinfo {
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
   text-align: center;
+  color: white;
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
 }
+.link-masinfo:hover{
+  background-color: rgb(189, 139, 189);
+  color: black;
+}
+
 /* Estilos Cart */
 .titulo-cart {
   margin: 1rem;
