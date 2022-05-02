@@ -5,7 +5,7 @@ import { CartContext } from "./CartContext";
 
 export default function Cart() {
 
-    const {cart, removerItem, comprarTodo, precioTotal, cantidadTotal } = useContext(CartContext);
+    const {cart, removerItem, precioTotal, cantidadTotal } = useContext(CartContext);
     console.log(cart);
  
 
@@ -36,13 +36,13 @@ export default function Cart() {
             </div>
         }
 
-        <div className="contenedor-boton-comprar">
+        {cart.length >= 1 ? <div className="contenedor-boton-comprar">
             <p><b>Precio Total: </b>$ {precioTotal}</p>
             <p><b>Cantidad Total: </b>{cantidadTotal()}</p>
-            <button className="boton-comprar" onClick={()=>comprarTodo()}>Terminar mi compra</button>
-            {/* <Link to= {"/formulariocompra"} className="ir-a-tienda">Finalizar Compra</Link> */}
-        </div>       
-        
+            <Link to= {"/formulariocompra"} className="boton-comprar">Comprar</Link>
+        </div>  :
+        <div></div>     
+        }
         </>
    
         

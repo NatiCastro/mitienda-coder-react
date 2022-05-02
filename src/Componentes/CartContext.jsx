@@ -28,7 +28,7 @@ export default function CartContextProvider ({children}) {
     const removerItem = (id) => {setCart(cart.filter((r) => r.id !== id))};
 
     //Función de "comprar" y resetear el array con los items
-    const comprarTodo = () => {console.log(setCart([]))};
+    const vaciarCarrito = () => {console.log(setCart([]))};
 
        //Funcion para sumar precio de todos los items 
        const [precioTotal, setPrecioTotal] = useState(0);
@@ -55,7 +55,7 @@ export default function CartContextProvider ({children}) {
 
 
     return (
-        <CartContext.Provider value={{cart, addToCart, removerItem, comprarTodo, precioTotal, cantidadTotal}}>
+        <CartContext.Provider value={{cart, addToCart, removerItem, vaciarCarrito, precioTotal, cantidadTotal}}>
             {children}
         </CartContext.Provider>
     )
