@@ -52,7 +52,7 @@ export default function FormularioCompra() {
                 phone.length===0)
     }
 
-    //Función para validar los campoa
+    //Función prevent default
     const handleSubmit = (e) => {
         e.preventDefault();
       }
