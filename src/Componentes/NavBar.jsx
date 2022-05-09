@@ -18,13 +18,14 @@ import IconoCarrito from "./CartWidget";
         <Navbar className="navBar-contenedor" expand="lg">
             <Container >
                 <Navbar fixed="top" />
-                <Navbar.Brand href="#home">Mainhdra Cosmética</Navbar.Brand>
+                <Navbar.Brand>Mainhdra Cosmética</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                     <Link to={"/"} style={{margin: '1rem',textDecoration:'none', color:'gray'}}>Home</Link>
                     <Link to={"/category/aceites"} style={{margin: '1rem',textDecoration:'none', color:'gray'}}>Aceites</Link>
                     <Link to={"/category/cremas"} style={{margin: '1rem',textDecoration:'none', color:'gray'}}>Cremas</Link>         
+                    <Link to={"/category/jabones"} style={{margin: '1rem',textDecoration:'none', color:'gray'}}>Jabones</Link>         
                     </Nav>
                 </Navbar.Collapse>
                 <IconoCarrito/>

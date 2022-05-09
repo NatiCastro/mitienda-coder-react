@@ -7,17 +7,18 @@
 .botones-itemcount {
   width: 40px;
   height: 40px;
+  color: #fff;
   text-align: center;
   font-weight: bolder;
-  background-color: rgb(189, 139, 189);
-  border: 2px solid rgb(189, 139, 189);
+  background-color: rgba(0, 0, 0, 0.829);
+  border: 1px solid rgba(0, 0, 0, 0.829);
   border-radius: 5px;
 }
 .botones-itemcount:hover {
-  background-color: rgb(245, 233, 244);
+  background-color: rgba(0, 0, 0, 0.856);
 }
 .cantidad-itemcount {
-  width: 120px;
+  width: 110px;
   height: 40px;
   text-align: center;
   padding: 1rem;
@@ -54,11 +55,21 @@
   text-align: center;
 }
 /* Estilos Item */
+.card-item{
+  margin: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+.card-item:hover {
+color: rgb(110, 114, 113);
+}
+
 .cards-productos {
   margin: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .card-producto {

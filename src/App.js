@@ -6,7 +6,7 @@ import ItemListContainer from './Componentes/ItemListContainer';
 import BarraNavegacion from './Componentes/NavBar';
 import Cart from './Componentes/Cart';
 import CartContextProvider from './Componentes/CartContext';
-import FormularioCompra from './Componentes/FormularioCompra';
+import OrderForm from './Componentes/OrderForm';
 
 
 
@@ -31,7 +31,7 @@ function App() {
 
         <Route exact path="/cart" element={<Cart />} />
 
-        <Route exact path="/formulariocompra" element={<FormularioCompra />} />
+        <Route exact path="/orderform" element={<OrderForm />} />
 
         <Route exact path="/category/:id" element={<ItemListContainer />} />
 

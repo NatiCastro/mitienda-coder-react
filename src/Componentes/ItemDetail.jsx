@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
 import '../Estilos/Items.css';
-import { Link } from "react-router-dom";
 
 
 export default function ItemDetail ({producto}) {
@@ -33,8 +32,7 @@ export default function ItemDetail ({producto}) {
                                 id={producto.id} 
                                 precio={producto.precio} 
                                 onAdd={handleOnAdd} />
-                    <br/>
-                    <Link to={"/cart"} className="ver-carrito">Ver carrito</Link> 
+                    <br/>   
                 </Card.Body>
                 </Card>     
              

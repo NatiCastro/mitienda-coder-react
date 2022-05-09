@@ -9,7 +9,7 @@ export default function ItemListContainer() {
 
     const [items, setItems] = useState([]);
 
-    const {id} = useParams();
+    const { id } = useParams();
 
     useEffect(()=>{
 
@@ -36,11 +36,9 @@ export default function ItemListContainer() {
     return (
         <>  
 
-        <div className="cards-productos">
-
-            <ItemList productos= {items} />
-
-        </div>
+            <div className="cards-productos">
+                <ItemList productos= {items} />
+            </div>
            
         </>
     );

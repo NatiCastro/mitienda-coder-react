@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../Estilos/Items.css";
 import { CartContext } from "./CartContext";
@@ -39,7 +39,7 @@ export default function Cart() {
         {cart.length >= 1 ? <div className="contenedor-boton-comprar">
             <p><b>Precio Total: </b>$ {precioTotal}</p>
             <p><b>Cantidad Total: </b>{cantidadTotal()}</p>
-            <Link to= {"/formulariocompra"} className="boton-comprar">Comprar</Link>
+            <Link to= {"/orderform"} className="boton-comprar">Comprar</Link>
         </div>  :
         <div></div>     
         }
