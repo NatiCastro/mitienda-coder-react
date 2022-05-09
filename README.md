@@ -4,7 +4,7 @@
 
 ### Autora: Natalia Castro
 
-![](https://github.com/NatiCastro/mitienda-coder-react/blob/main/src/Images/Screenshot%202022-04-12%20at%2018-59-34%20React%20App.png)
+![](https://github.com/NatiCastro/mitienda-coder-react/blob/main/src/Images/Screenshot%202022-05-09%20at%2011-00-24%20React%20App.png)
 
 ## Tecnología
 
