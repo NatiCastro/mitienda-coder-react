@@ -47,6 +47,7 @@ export default function CartContextProvider ({children}) {
 
         //Función para sumar la cantidad total de productos
         const cantidadTotal= ()=> (cart.reduce((total, item)=> total+= item.count, 0));
+        
         useEffect(()=>{
 
            cantidadTotal();

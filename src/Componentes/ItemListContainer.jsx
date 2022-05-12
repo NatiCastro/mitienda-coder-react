@@ -4,6 +4,7 @@ import ItemList from "./ItemList";
 import '../Estilos/Items.css';
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import Footer from "./Footer";
 
 export default function ItemListContainer() {
 
@@ -39,6 +40,8 @@ export default function ItemListContainer() {
             <div className="cards-productos">
                 <ItemList productos= {items} />
             </div>
+
+            <Footer />
            
         </>
     );

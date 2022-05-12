@@ -5,6 +5,7 @@ import '../Estilos/Items.css';
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Spinner from 'react-bootstrap/Spinner';
 
 
 export default function ItemDetailContainer() {
@@ -32,8 +33,10 @@ export default function ItemDetailContainer() {
         <>  
         {loading ? (
 
-                <h2 className="text-loading ">Cargando Producto...</h2>
-
+                // <h3 className="text-loading ">Cargando Producto...</h3>
+                <div className="spinner">
+                    <Spinner animation="grow" variant="secondary" />
+                </div>
                 ) : (
 
                 <div className="card-producto">

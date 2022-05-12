@@ -9,8 +9,6 @@ import CartContextProvider from './Componentes/CartContext';
 import OrderForm from './Componentes/OrderForm';
 
 
-
-
 function App() {
 
   let tienda = 'Tienda Mainhdra';

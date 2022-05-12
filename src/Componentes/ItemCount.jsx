@@ -49,7 +49,7 @@ export default function ItemCount ({stock, nombre, id, precio, onAdd}) {
                 Agregar al carrito
             </button>    */}
         <Button variant="dark" size="lg" onClick={()=>{handleShow();
-                                            addToCart({id, nombre, precio, count});
+                                            addToCart({id, nombre, precio, count, stock});
                                             setCount(1);
                                             onAdd(count);
                                         }}>
@@ -62,10 +62,10 @@ export default function ItemCount ({stock, nombre, id, precio, onAdd}) {
           </Modal.Header>
           <Modal.Body>Agregaste {nombre} al carrito.</Modal.Body>
           <Modal.Footer>
+          <Link to={"/cart"} className="ver-carrito">Ver carrito</Link>
             <Button variant="secondary" onClick={handleClose}>
               Cerrar
             </Button>
-            <Link to={"/cart"} className="ver-carrito">Ver carrito</Link>
           </Modal.Footer>
         </Modal>
         </>

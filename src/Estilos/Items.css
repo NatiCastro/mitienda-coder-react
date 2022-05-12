@@ -18,10 +18,11 @@
   background-color: rgba(0, 0, 0, 0.856);
 }
 .cantidad-itemcount {
-  width: 110px;
+  width: 105px;
   height: 40px;
   text-align: center;
   padding: 1rem;
+  font-size: 1.2rem;
 }
 .agregar-carrito {
   text-align: center;
@@ -51,11 +52,11 @@
   color: black;
 }
 .text-loading {
-  color: rgb(189, 139, 189);
+  color: rgb(165, 113, 165);
   text-align: center;
 }
 /* Estilos Item */
-.card-item{
+.card-item {
   margin: 0.5rem;
   text-decoration: none;
   text-align: center;
@@ -63,8 +64,15 @@
 }
 .card-item:hover {
 color: rgb(110, 114, 113);
+box-shadow: 3px 3px 3px 3px rgba(110, 114, 113, 0.637) ;
 }
-
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+/* Estilos itemList */
 .cards-productos {
   margin: 2rem;
   display: flex;
@@ -78,7 +86,7 @@ color: rgb(110, 114, 113);
   justify-content: center;
   align-items: center;
 }
-.link-masinfo {
+/* .link-masinfo {
   padding: 0.4rem 0.8rem;
   text-decoration: none;
   text-align: center;
@@ -92,7 +100,7 @@ color: rgb(110, 114, 113);
 .link-masinfo:hover{
   background-color: rgb(189, 139, 189);
   color: black;
-}
+} */
 
 /* Estilos Cart */
 .titulo-cart {
@@ -105,6 +113,7 @@ color: rgb(110, 114, 113);
 }
 .carrito {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -145,6 +154,9 @@ color: rgb(110, 114, 113);
   background-color: rgb(189, 139, 189);
   color: black;
 }
+.disabled {
+  pointer-events: none;
+}
 .ir-a-tienda {
   margin: 2rem;
   font-size: 1.2rem;
@@ -166,17 +178,32 @@ color: rgb(110, 114, 113);
     display: flex;
     flex-basis: 65%;
     flex-direction: column;
-    height: 50vh;
-    justify-content: center;
+    height: 80vh;
     align-items: center;
 }
 .form-label {
+  margin-bottom: 0.3rem;
   font-weight: 600;
   color: black;
 }
 .form-input {
+  margin-bottom: 0.6rem;
   padding: 0.2rem;
   width: 16rem;
+  outline: none;
   border-radius: 5px;
   border: 1px solid rgb(189, 139, 189);
+}
+.form-input:focus {
+  border: 2px solid rgb(168, 121, 168);
+}
+.errors {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.mensaje-compra {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(134, 81, 134);;
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Estilos/Items.css";
 import { CartContext } from "./CartContext";
@@ -6,8 +6,11 @@ import { CartContext } from "./CartContext";
 export default function Cart() {
 
     const {cart, removerItem, precioTotal, cantidadTotal } = useContext(CartContext);
+
     console.log(cart);
- 
+
+    let noStock = false;
+    
 
     return (
         <>
@@ -24,11 +27,14 @@ export default function Cart() {
                         <b> Precio:</b> $ {c.precio} | 
                         <b> Cantidad:</b> {c.count} | 
                         <b> Total:</b> $ {c.precio * c.count}  
-
-                        <button className="boton-remover" onClick={() => removerItem(c.id)}> Remover </button>
+                        <button className="boton-remover" onClick={() => removerItem(c.id)}> Remover </button>                    
+                        {c.stock < c.count  ?  (<p style={{color:'red', textAlign: 'center'}}>
+                                                No hay suficiente stock de este producto {noStock=true}</p>                                                                                    
+                                            ) : ( <p></p>
+                        )}
                     </li>
                 </ul>  
-            </div>)) : 
+            </div>))   : 
 
             <div className="carrito">
                 <h2>Tu Carrito está vacío</h2>
@@ -36,12 +42,15 @@ export default function Cart() {
             </div>
         }
 
-        {cart.length >= 1 ? <div className="contenedor-boton-comprar">
-            <p><b>Precio Total: </b>$ {precioTotal}</p>
-            <p><b>Cantidad Total: </b>{cantidadTotal()}</p>
-            <Link to= {"/orderform"} className="boton-comprar">Comprar</Link>
-        </div>  :
-        <div></div>     
+        {cart.length >= 1 ? 
+            <div className="contenedor-boton-comprar">
+                <p><b>Precio Total: </b>$ {precioTotal}</p>
+                <p><b>Cantidad Total: </b>{cantidadTotal()}</p>
+                <Link to= {"/orderform"}>
+                <button type="button" className="boton-comprar" disabled={noStock}>Comprar</button>               
+                </Link>
+            </div>  :
+            <div></div>     
         }
         </>
    
