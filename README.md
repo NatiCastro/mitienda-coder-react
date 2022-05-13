@@ -14,7 +14,7 @@
 
 - React Bootstrap
 
-> Utilizado para Cards, Navbar, Modal.
+> Utilizado para Cards, Navbar, Modal, Spinner.
 > Darle estilo.
 > Es responsive.
 

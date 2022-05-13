@@ -19,7 +19,9 @@ export default function FormularioCompra() {
 
     //Función para subir la venta a Firestore con mensaje de "Compra exitosa"
     function terminarCompra(data) {
-            
+
+        console.log('Procesando...');    
+        
         setDisabled(true);
 
             let buyer = {
@@ -91,7 +93,7 @@ export default function FormularioCompra() {
                         type="tel" 
                         placeholder="Teléfono" {...register("phone", { required: true, minLength: 10, maxLength: 10, pattern: /[0-9]+/i })} />
                         {errors.phone?.type === 'required' && <p className="errors">Completa tu teléfono</p>}
-                        {errors.phone?.type === 'maxLength' && <p className="errors">Debe contener solo 10 caracteres</p>}
+                        {errors.phone?.type === 'maxLength' && <p className="errors">Debe contener 10 caracteres</p>}
                         {errors.phone?.type === 'pattern' && <p className="errors">Debe contener solo números </p>}
                 <input className="boton-comprar" 
                         type="submit" 
