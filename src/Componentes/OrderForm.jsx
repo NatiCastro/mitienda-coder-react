@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "../Estilos/Items.css";
 import { CartContext } from "./CartContext";
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
-//Librería react hook form
 import { useForm } from 'react-hook-form';
 
 export default function FormularioCompra() {
@@ -21,7 +20,7 @@ export default function FormularioCompra() {
     function terminarCompra(data) {
 
         console.log('Procesando...');    
-        
+
         setDisabled(true);
 
             let buyer = {

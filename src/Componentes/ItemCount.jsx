@@ -40,14 +40,6 @@ export default function ItemCount ({stock, nombre, id, precio, onAdd}) {
                 <p className="cantidad-itemcount">{count}</p>
                 <button className="botones-itemcount" onClick={Suma}>+</button>
             </div>
-            {/* <button className="agregar-carrito" 
-            onClick={()=>{  
-                            addToCart({id, nombre, precio, count});
-                            setCount(1);
-                            onAdd(count);
-                        }}>
-                Agregar al carrito
-            </button>    */}
         <Button variant="dark" size="lg" onClick={()=>{handleShow();
                                             addToCart({id, nombre, precio, count, stock});
                                             setCount(1);

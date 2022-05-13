@@ -32,8 +32,6 @@ export default function ItemDetailContainer() {
     return (
         <>  
         {loading ? (
-
-                // <h3 className="text-loading ">Cargando Producto...</h3>
                 <div className="spinner">
                     <Spinner animation="grow" variant="secondary" />
                 </div>
